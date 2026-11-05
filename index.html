@@ -48,21 +48,35 @@
             </div>
 
             <div class="data-card">
-
                 <div class="card-header">
                     <div>
                         <h4>Daftar Anggota</h4>
                         <p>Data anggota yang terdaftar dalam proyek.</p>
                     </div>
                     
-                    <div style="display: flex; align-items: center; gap: 8px;">
-                        <select id="filter-tugas" class="filter-select" style="padding: 6px 10px; border-radius: 6px; border: 1px solid #ccc;">
-                            <option value="">Semua Tugas</option>
-                        </select>
+                    <div class="card-actions">
+                        <a
+                            href="https://forms.gle/8f2v7DkhRkfLYp8f9"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="register-button">
+                            
+                            <span class="material-symbols-outlined">
+                                person_add
+                            </span>
+                            
+                            <span>Daftar Anggota</span>
+                        </a>
                         
-                        <button class="filter-button" aria-label="Filter data" style="display: none;">
-                            <span class="material-symbols-outlined">filter_list</span>
-                        </button>
+                        <div class="filter-wrapper">
+                            <select id="filter-tugas" class="filter-select">
+                                <option value="">Semua Tugas</option>
+                            </select>
+                            
+                            <button class="filter-button" aria-label="Filter data" style="display: none;">
+                                <span class="material-symbols-outlined">filter_list</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 
@@ -153,7 +167,7 @@
 
             <div class="chart-placeholder">
                 <span class="material-symbols-outlined">monitoring</span>
-                <p>Grafik perkembangan proyek akan ditampilkan di sini(belum jadi).</p>
+                <p>Grafik perkembangan proyek akan ditampilkan di sini.</p>
             </div>
 
         </section>

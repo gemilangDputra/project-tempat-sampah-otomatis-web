@@ -327,6 +327,57 @@ td {
         padding: 16px;
     }
 
+    .card-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .register-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+    
+        padding: 9px 13px;
+    
+        background: #2563eb;
+        color: white;
+    
+        border-radius: 7px;
+        text-decoration: none;
+    
+        font-size: 12px;
+        font-weight: 600;
+    
+        white-space: nowrap;
+    
+        transition: background 0.2s ease;
+    }
+    
+    .register-button:hover {
+        background: #1d4ed8;
+    }
+    
+    .register-button .material-symbols-outlined {
+        font-size: 18px;
+    }
+    
+    .filter-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .filter-select {
+        padding: 8px 10px;
+        border-radius: 7px;
+        border: 1px solid #ddd;
+        background: white;
+        font: inherit;
+        font-size: 12px;
+    }
+
     th,
     td {
         padding: 14px 16px;
@@ -348,11 +399,9 @@ td {
     .chart-placeholder {
         min-height: 180px;
     }
-
 }
 
 @media (max-width: 360px) {
-
     .container {
         padding: 20px 14px;
     }
@@ -369,4 +418,17 @@ td {
         font-size: 24px;
     }
 
+    .card-header {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    
+    .card-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .register-button {
+        padding: 9px 11px;
+    }
 }
