@@ -138,6 +138,7 @@ button {
     color: #444;
     cursor: pointer;
     flex-shrink: 0;
+    transition: background 0.2s ease;
 }
 
 .filter-button:hover {
@@ -203,6 +204,15 @@ td {
     background: white;
     border: 1px solid #e9eaed;
     border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.resource-card:hover {
+    background: #fafbfc;
+    border-color: #d5d9df;
 }
 
 .file-icon {
@@ -221,14 +231,26 @@ td {
     font-size: 23px;
 }
 
+.resource-info {
+    min-width: 0;
+}
+
 .resource-info h4 {
     font-size: 14px;
     margin-bottom: 6px;
+    line-height: 1.4;
 }
 
 .resource-info p {
     font-size: 12px;
     color: #888;
+}
+
+.resource-action {
+    margin-left: auto;
+    color: #999;
+    font-size: 19px;
+    flex-shrink: 0;
 }
 
 .chart-placeholder {
@@ -257,12 +279,28 @@ td {
         padding: 24px 18px;
     }
 
+    .header {
+        gap: 13px;
+    }
+
     .brand h1 {
         font-size: 21px;
     }
 
-    .header {
-        gap: 13px;
+    .brand-label {
+        font-size: 10px;
+    }
+
+    .project-info {
+        font-size: 11px;
+    }
+
+    .project-info strong {
+        font-size: 12px;
+    }
+
+    .header-divider {
+        height: 34px;
     }
 
     .introduction {
@@ -281,6 +319,10 @@ td {
         margin-top: 34px;
     }
 
+    .section-header h3 {
+        font-size: 17px;
+    }
+
     .card-header {
         padding: 16px;
     }
@@ -292,6 +334,39 @@ td {
 
     .resource-card {
         padding: 15px;
+        gap: 12px;
+    }
+
+    .resource-info h4 {
+        font-size: 13px;
+    }
+
+    .resource-info p {
+        font-size: 11px;
+    }
+
+    .chart-placeholder {
+        min-height: 180px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .container {
+        padding: 20px 14px;
+    }
+
+    .brand h1 {
+        font-size: 18px;
+    }
+
+    .header {
+        gap: 10px;
+    }
+
+    .introduction h2 {
+        font-size: 24px;
     }
 
 }

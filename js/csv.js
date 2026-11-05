@@ -55,7 +55,7 @@ export const CSVParser = {
             nama: item["Nama:"]?.trim()
                 || "Tidak ditentukan",
             
-            tugas : item["Anda ingin menjadi."]?.trim()
+            tugas : item["Anda ingin menjadi"]?.trim()
                 || "Tidak ditentukan"
         };
     },
