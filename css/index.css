@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fb;
+    color: #202124;
+    min-height: 100vh;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #777;
+    margin-bottom: 7px;
+}
+
+.brand h1 {
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.header-divider {
+    width: 1px;
+    height: 38px;
+    background: #e3e5e8;
+    margin-left: auto;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+}
+
+.project-info span {
+    color: #888;
+}
+
+.project-info strong {
+    color: #333;
+    font-size: 13px;
+}
+
+.introduction {
+    margin-top: 55px;
+    max-width: 600px;
+}
+
+.introduction h2 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.introduction p {
+    color: #70757a;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.content {
+    margin-top: 42px;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.section-header p {
+    font-size: 13px;
+    color: #777;
+}
+
+.data-card {
+    background: white;
+    border: 1px solid #e9eaed;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px;
+}
+
+.card-header h4 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.card-header p {
+    font-size: 12px;
+    color: #888;
+}
+
+.filter-button {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e3e5e8;
+    border-radius: 9px;
+    background: white;
+    color: #444;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.filter-button:hover {
+    background: #f5f6f8;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    white-space: nowrap;
+}
+
+thead {
+    background: #f8f9fb;
+}
+
+th {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    padding: 13px 20px;
+}
+
+td {
+    font-size: 13px;
+    color: #444;
+    padding: 16px 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.card-footer {
+    padding: 14px 20px;
+    border-top: 1px solid #f0f0f0;
+    font-size: 12px;
+    color: #999;
+}
+
+.resource-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.resource-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 17px 20px;
+    background: white;
+    border: 1px solid #e9eaed;
+    border-radius: 10px;
+}
+
+.file-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f1f1;
+    color: #c65b5b;
+    border-radius: 9px;
+    flex-shrink: 0;
+}
+
+.file-icon span {
+    font-size: 23px;
+}
+
+.resource-info h4 {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.resource-info p {
+    font-size: 12px;
+    color: #888;
+}
+
+.chart-placeholder {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: white;
+    border: 1px solid #e9eaed;
+    border-radius: 12px;
+    color: #999;
+    font-size: 13px;
+    text-align: center;
+    padding: 20px;
+}
+
+.chart-placeholder span {
+    font-size: 32px;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 24px 18px;
+    }
+
+    .brand h1 {
+        font-size: 21px;
+    }
+
+    .header {
+        gap: 13px;
+    }
+
+    .introduction {
+        margin-top: 42px;
+    }
+
+    .introduction h2 {
+        font-size: 27px;
+    }
+
+    .introduction p {
+        font-size: 14px;
+    }
+
+    .content {
+        margin-top: 34px;
+    }
+
+    .card-header {
+        padding: 16px;
+    }
+
+    th,
+    td {
+        padding: 14px 16px;
+    }
+
+    .resource-card {
+        padding: 15px;
+    }
+
+}
