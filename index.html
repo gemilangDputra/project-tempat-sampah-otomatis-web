@@ -4,83 +4,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="Ruang kerja bersama proyek Tempat Sampah Otomatis berbasis Arduino: anggota, materi, rangkaian, dan source code.">
 
     <title>Ruang Kerja Proyek</title>
 
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/themes/prism-tomorrow.min.css"/>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <main class="container">
+    <a class="skip-link" href="#main">Lewati ke konten</a>
 
-        <header class="header">
-            <div class="brand">
-                <span class="brand-label">PROYEK ARDUINO</span>
-                <h1>Ruang Kerja Proyek</h1>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <a class="brand" href="#top" aria-label="Ruang Kerja Proyek, kembali ke atas">
+                <span class="brand-mark material-symbols-outlined" aria-hidden="true">recycling</span>
+                <span class="brand-text">
+                    <span class="brand-label">Proyek Arduino</span>
+                    <span class="brand-name">Ruang Kerja Proyek</span>
+                </span>
+            </a>
+
+            <nav class="topnav" aria-label="Navigasi bagian">
+                <a href="#anggota" data-section="anggota">Anggota</a>
+                <a href="#materi" data-section="materi">Materi</a>
+                <a href="#rangkaian" data-section="rangkaian">Rangkaian</a>
+                <a href="#kode" data-section="kode">Kode</a>
+                <a href="#perkembangan" data-section="perkembangan">Perkembangan</a>
+            </nav>
+
+            <div class="status-pill" title="Status proyek saat ini">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span>Berjalan</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="main">
+        <span id="top"></span>
+
+        <section class="intro">
+            <div class="intro-copy">
+                <p class="eyebrow">Tempat Sampah Otomatis</p>
+                <h1>Semua kebutuhan proyek dalam satu tempat.</h1>
+                <p class="lead">
+                    Ruang kerja bersama untuk proyek Tempat Sampah Otomatis.
+                    Temukan daftar anggota, materi pembelajaran, panduan perakitan,
+                    skema rangkaian, source code, dan perkembangan proyek.
+                </p>
             </div>
 
-            <div class="header-divider"></div>
-
-            <div class="project-info">
-                <span>Status Proyek</span>
-                <strong>Berjalan</strong>
-            </div>
-        </header>
-
-        <section class="introduction">
-            <h2>Semua kebutuhan dalam satu tempat.</h2>
-
-            <p>
-                Ruang kerja bersama untuk proyek Tempat Sampah Otomatis.
-                Temukan materi pembelajaran, panduan pengerjaan,
-                informasi anggota, dan perkembangan proyek.
-            </p>
+            <dl class="stats" aria-label="Ringkasan proyek">
+                <div class="stat">
+                    <dt>
+                        <span class="material-symbols-outlined" aria-hidden="true">groups</span>
+                        Anggota
+                    </dt>
+                    <dd id="stat-members">–</dd>
+                </div>
+                <div class="stat">
+                    <dt>
+                        <span class="material-symbols-outlined" aria-hidden="true">task_alt</span>
+                        Pembagian tugas
+                    </dt>
+                    <dd id="stat-tasks">–</dd>
+                </div>
+                <div class="stat">
+                    <dt>
+                        <span class="material-symbols-outlined" aria-hidden="true">description</span>
+                        Dokumen
+                    </dt>
+                    <dd id="stat-docs">3</dd>
+                </div>
+                <div class="stat">
+                    <dt>
+                        <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+                        Data diperbarui
+                    </dt>
+                    <dd id="stat-updated" class="stat-small">–</dd>
+                </div>
+            </dl>
         </section>
 
-        <section class="content">
+        <!-- Anggota -->
+        <section class="content" id="anggota" aria-labelledby="anggota-title">
             <div class="section-header">
-                <h3>Data Anggota</h3>
+                <h2 id="anggota-title">Data Anggota</h2>
                 <p>Informasi anggota dan pembagian tugas proyek.</p>
             </div>
 
-            <div class="data-card">
+            <div class="card">
                 <div class="card-header">
                     <div>
-                        <h4>Daftar Anggota</h4>
+                        <h3>Daftar Anggota</h3>
                         <p>Data anggota yang terdaftar dalam proyek.</p>
                     </div>
 
-                    <div class="card-actions">
-                        <a
-                            href="https://forms.gle/DY9wHzjjau8SFWgi9"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="register-button">
+                    <a
+                        href="https://forms.gle/DY9wHzjjau8SFWgi9"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-primary">
+                        <span class="material-symbols-outlined" aria-hidden="true">person_add</span>
+                        <span>Daftar Anggota</span>
+                    </a>
+                </div>
 
-                            <span class="material-symbols-outlined">
-                                person_add
-                            </span>
+                <div class="toolbar">
+                    <label class="search-field" for="search-member">
+                        <span class="material-symbols-outlined" aria-hidden="true">search</span>
+                        <input
+                            id="search-member"
+                            type="search"
+                            placeholder="Cari nama, email, atau tugas"
+                            autocomplete="off">
+                    </label>
 
-                            <span>Daftar Anggota</span>
-                        </a>
-
-                        <div class="filter-wrapper">
-                            <select id="filter-tugas" class="filter-select">
+                    <div class="toolbar-group">
+                        <label class="select-field">
+                            <span class="sr-only">Filter tugas</span>
+                            <select id="filter-tugas" class="select">
                                 <option value="">Semua Tugas</option>
                             </select>
+                        </label>
 
-                            <button
-                                class="filter-button"
-                                aria-label="Filter data"
-                                style="display: none;">
+                        <label class="select-field">
+                            <span class="sr-only">Urutkan</span>
+                            <select id="sort-member" class="select">
+                                <option value="newest">Terbaru</option>
+                                <option value="oldest">Terlama</option>
+                                <option value="name">Nama A–Z</option>
+                                <option value="task">Tugas A–Z</option>
+                            </select>
+                        </label>
 
-                                <span class="material-symbols-outlined">
-                                    filter_list
-                                </span>
-                            </button>
-                        </div>
+                        <button id="toggle-email" class="btn btn-ghost" type="button" aria-pressed="false">
+                            <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
+                            <span>Tampilkan email</span>
+                        </button>
+
+                        <button id="refresh-members" class="btn btn-ghost btn-icon" type="button" aria-label="Muat ulang data anggota">
+                            <span class="material-symbols-outlined" aria-hidden="true">refresh</span>
+                        </button>
                     </div>
                 </div>
 
@@ -88,162 +157,172 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Timestamp</th>
-                                <th>Email</th>
-                                <th>Nama</th>
-                                <th>Tugas</th>
+                                <th scope="col">Timestamp</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Tugas</th>
                             </tr>
                         </thead>
 
                         <tbody id="members-table-body">
-                            <tr>
-                                <td colspan="4" style="text-align: center;">
-                                    Memuat data...
-                                </td>
+                            <tr class="table-message">
+                                <td colspan="4">Memuat data...</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <div class="card-footer">
-                    <span id="member-count">Menampilkan 0 anggota</span>
+                <div class="card-footer footer-split">
+                    <span id="member-count" aria-live="polite">Menampilkan 0 anggota</span>
+                    <button id="show-more" class="btn btn-ghost" type="button" hidden>Tampilkan lebih banyak</button>
                 </div>
             </div>
         </section>
 
-        <section class="content">
+        <!-- Materi & Panduan -->
+        <section class="content" id="materi" aria-labelledby="materi-title">
             <div class="section-header">
-                <h3>Materi & Panduan</h3>
+                <h2 id="materi-title">Materi &amp; Panduan</h2>
                 <p>Dokumen dan referensi untuk membantu pengerjaan proyek.</p>
             </div>
-        
+
             <div class="pdf-list">
-        
-                <!-- Materi Pembelajaran -->
-                <div class="pdf-card">
-                    <div class="pdf-header">
-                        <div class="pdf-info">
-                            <h4>Materi Project Tempat Sampah Otomatis</h4>
+
+                <article class="card pdf-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Materi Project Tempat Sampah Otomatis</h3>
                             <p>Dokumen PDF · Materi Pembelajaran</p>
                         </div>
-        
-                        <a
-                            href="https://docs.google.com/gview?embedded=1&url=https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/Materi%20Project%20Tempat%20Sampah%20Otomatis.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="register-button">
-        
-                            <span class="material-symbols-outlined">
-                                open_in_new
-                            </span>
-                            <span>Via Google Docs</span>
-                        </a>
+
+                        <div class="header-actions">
+                            <a
+                                class="btn btn-ghost pdf-download"
+                                href="https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/Materi%20Project%20Tempat%20Sampah%20Otomatis.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                download>
+                                <span class="material-symbols-outlined" aria-hidden="true">download</span>
+                                <span>Unduh</span>
+                            </a>
+                            <a
+                                class="btn btn-primary"
+                                href="https://docs.google.com/gview?embedded=1&url=https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/Materi%20Project%20Tempat%20Sampah%20Otomatis.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+                                <span>Via Google Docs</span>
+                            </a>
+                        </div>
                     </div>
-        
-                    <div class="pdf-viewer">
+
+                    <div class="pdf-viewer" data-src="https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/Materi%20Project%20Tempat%20Sampah%20Otomatis.pdf">
                         <div class="pdf-toolbar">
-                            <button class="pdf-prev" disabled>
-                                <span class="material-symbols-outlined">chevron_left</span>
+                            <button class="pdf-prev" type="button" aria-label="Halaman sebelumnya" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                             </button>
-        
                             <span class="pdf-page-info">Memuat PDF...</span>
-        
-                            <button class="pdf-next" disabled>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                            <button class="pdf-next" type="button" aria-label="Halaman berikutnya" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                             </button>
-        
+
                             <span class="pdf-toolbar-divider"></span>
-        
-                            <button class="pdf-zoom-out" disabled>
-                                <span class="material-symbols-outlined">remove</span>
+
+                            <button class="pdf-zoom-out" type="button" aria-label="Perkecil" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">remove</span>
                             </button>
-        
                             <span class="pdf-zoom-info">100%</span>
-        
-                            <button class="pdf-zoom-in" disabled>
-                                <span class="material-symbols-outlined">add</span>
+                            <button class="pdf-zoom-in" type="button" aria-label="Perbesar" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">add</span>
+                            </button>
+                            <button class="pdf-fit" type="button" aria-label="Sesuaikan lebar" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">fit_screen</span>
                             </button>
                         </div>
-        
-                        <div class="pdf-canvas-container">
+
+                        <div class="pdf-canvas-container" tabindex="0" aria-label="Pratinjau dokumen">
                             <canvas class="pdf-canvas"></canvas>
                         </div>
-        
-                        <div class="pdf-status">Memuat dokumen...</div>
+
+                        <div class="pdf-status" aria-live="polite">Dokumen dimuat saat bagian ini terlihat.</div>
                     </div>
-                </div>
-        
-                <!-- Panduan Rangkaian -->
-                <div class="pdf-card">
-                    <div class="pdf-header">
-                        <div class="pdf-info">
-                            <h4>Panduan Rangkaian Tempat Sampah Otomatis</h4>
+                </article>
+
+                <article class="card pdf-card">
+                    <div class="card-header">
+                        <div>
+                            <h3>Panduan Rangkaian Tempat Sampah Otomatis</h3>
                             <p>Dokumen PDF · Panduan Perakitan</p>
                         </div>
-        
-                        <a
-                            href="https://docs.google.com/gview?embedded=1&url=https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/Panduan%20Rangkaian%20Tempat%20Sampah%20Otomatis.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="register-button">
-        
-                            <span class="material-symbols-outlined">
-                                open_in_new
-                            </span>
-                            <span>Via Google Docs</span>
-                        </a>
+
+                        <div class="header-actions">
+                            <a
+                                class="btn btn-ghost pdf-download"
+                                href="https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/Panduan%20Rangkaian%20Tempat%20Sampah%20Otomatis.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                download>
+                                <span class="material-symbols-outlined" aria-hidden="true">download</span>
+                                <span>Unduh</span>
+                            </a>
+                            <a
+                                class="btn btn-primary"
+                                href="https://docs.google.com/gview?embedded=1&url=https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/Panduan%20Rangkaian%20Tempat%20Sampah%20Otomatis.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+                                <span>Via Google Docs</span>
+                            </a>
+                        </div>
                     </div>
-        
-                    <div class="pdf-viewer">
+
+                    <div class="pdf-viewer" data-src="https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/Panduan%20Rangkaian%20Tempat%20Sampah%20Otomatis.pdf">
                         <div class="pdf-toolbar">
-                            <button class="pdf-prev" disabled>
-                                <span class="material-symbols-outlined">chevron_left</span>
+                            <button class="pdf-prev" type="button" aria-label="Halaman sebelumnya" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                             </button>
-        
                             <span class="pdf-page-info">Memuat PDF...</span>
-        
-                            <button class="pdf-next" disabled>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                            <button class="pdf-next" type="button" aria-label="Halaman berikutnya" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                             </button>
-        
+
                             <span class="pdf-toolbar-divider"></span>
-        
-                            <button class="pdf-zoom-out" disabled>
-                                <span class="material-symbols-outlined">remove</span>
+
+                            <button class="pdf-zoom-out" type="button" aria-label="Perkecil" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">remove</span>
                             </button>
-        
                             <span class="pdf-zoom-info">100%</span>
-        
-                            <button class="pdf-zoom-in" disabled>
-                                <span class="material-symbols-outlined">add</span>
+                            <button class="pdf-zoom-in" type="button" aria-label="Perbesar" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">add</span>
+                            </button>
+                            <button class="pdf-fit" type="button" aria-label="Sesuaikan lebar" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">fit_screen</span>
                             </button>
                         </div>
-        
-                        <div class="pdf-canvas-container">
+
+                        <div class="pdf-canvas-container" tabindex="0" aria-label="Pratinjau dokumen">
                             <canvas class="pdf-canvas"></canvas>
                         </div>
-        
-                        <div class="pdf-status">Memuat dokumen...</div>
+
+                        <div class="pdf-status" aria-live="polite">Dokumen dimuat saat bagian ini terlihat.</div>
                     </div>
-                </div>
-        
+                </article>
+
             </div>
         </section>
 
-        <section class="content">
+        <!-- Dokumentasi Rangkaian -->
+        <section class="content" id="rangkaian" aria-labelledby="rangkaian-title">
             <div class="section-header">
-                <h3>Dokumentasi Rangkaian</h3>
-                <p>
-                    Skema dan visualisasi rangkaian proyek
-                    Tempat Sampah Otomatis.
-                </p>
+                <h2 id="rangkaian-title">Dokumentasi Rangkaian</h2>
+                <p>Skema dan visualisasi rangkaian proyek Tempat Sampah Otomatis.</p>
             </div>
 
             <div class="circuit-list">
-                <div class="circuit-card">
-                    <div class="circuit-header">
+                <article class="card">
+                    <div class="card-header">
                         <div>
-                            <h4>Rangkaian Tempat Sampah Otomatis</h4>
+                            <h3>Rangkaian Tempat Sampah Otomatis</h3>
                             <p>Diagram koneksi komponen · PNG</p>
                         </div>
 
@@ -251,11 +330,9 @@
                             href="https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/Rangkaian.png"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="circuit-action">
-
-                            <span class="material-symbols-outlined">
-                                open_in_new
-                            </span>
+                            class="btn btn-ghost btn-icon"
+                            aria-label="Buka gambar rangkaian di tab baru">
+                            <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
                         </a>
                     </div>
 
@@ -265,118 +342,134 @@
                             alt="Diagram rangkaian Tempat Sampah Otomatis"
                             loading="lazy">
                     </div>
-                </div>
-                
-                <div class="circuit-card">
-                    <div class="circuit-header">
+                </article>
+
+                <article class="card pdf-card">
+                    <div class="card-header">
                         <div>
-                            <h4>Schematic Rangkaian</h4>
+                            <h3>Schematic Rangkaian</h3>
                             <p>Dokumentasi schematic · PDF</p>
                         </div>
-                
-                        <a
-                            href="https://docs.google.com/gview?embedded=1&url=https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/schematic.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="circuit-action">
-                
-                            <span class="material-symbols-outlined">
-                                open_in_new
-                            </span>
-                        </a>
+
+                        <div class="header-actions">
+                            <a
+                                class="btn btn-ghost pdf-download"
+                                href="https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/schematic.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                download>
+                                <span class="material-symbols-outlined" aria-hidden="true">download</span>
+                                <span>Unduh</span>
+                            </a>
+                            <a
+                                class="btn btn-ghost btn-icon"
+                                href="https://docs.google.com/gview?embedded=1&url=https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/schematic.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Buka schematic via Google Docs">
+                                <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+                            </a>
+                        </div>
                     </div>
-                
-                    <div class="pdf-viewer">
+
+                    <div class="pdf-viewer" data-src="https://raw.githubusercontent.com/gemilangDputra/project-tempat-sampah-otomatis-web/main/asset/schematic.pdf">
                         <div class="pdf-toolbar">
-                            <button class="pdf-prev" disabled>
-                                <span class="material-symbols-outlined">chevron_left</span>
+                            <button class="pdf-prev" type="button" aria-label="Halaman sebelumnya" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
                             </button>
-                
                             <span class="pdf-page-info">Memuat PDF...</span>
-                
-                            <button class="pdf-next" disabled>
-                                <span class="material-symbols-outlined">chevron_right</span>
+                            <button class="pdf-next" type="button" aria-label="Halaman berikutnya" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
                             </button>
-                
+
                             <span class="pdf-toolbar-divider"></span>
-                
-                            <button class="pdf-zoom-out" disabled>
-                                <span class="material-symbols-outlined">remove</span>
+
+                            <button class="pdf-zoom-out" type="button" aria-label="Perkecil" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">remove</span>
                             </button>
-                
                             <span class="pdf-zoom-info">100%</span>
-                
-                            <button class="pdf-zoom-in" disabled>
-                                <span class="material-symbols-outlined">add</span>
+                            <button class="pdf-zoom-in" type="button" aria-label="Perbesar" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">add</span>
+                            </button>
+                            <button class="pdf-fit" type="button" aria-label="Sesuaikan lebar" disabled>
+                                <span class="material-symbols-outlined" aria-hidden="true">fit_screen</span>
                             </button>
                         </div>
-                
-                        <div class="pdf-canvas-container">
+
+                        <div class="pdf-canvas-container" tabindex="0" aria-label="Pratinjau dokumen">
                             <canvas class="pdf-canvas"></canvas>
                         </div>
-                
-                        <div class="pdf-status">Memuat dokumen...</div>
+
+                        <div class="pdf-status" aria-live="polite">Dokumen dimuat saat bagian ini terlihat.</div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
-        
-        <section class="content">
+
+        <!-- CodeSpace -->
+        <section class="content" id="kode" aria-labelledby="kode-title">
             <div class="section-header">
-                <h3>CodeSpace</h3>
-                <p>
-                    Source code Arduino yang digunakan dalam
-                    proyek Tempat Sampah Otomatis.
-                </p>
+                <h2 id="kode-title">CodeSpace</h2>
+                <p>Source code Arduino yang digunakan dalam proyek Tempat Sampah Otomatis.</p>
             </div>
-            
-            <div class="data-card codespace-card">
+
+            <div class="card codespace-card">
                 <div class="card-header">
                     <div>
-                        <h4>Arduino Source Code</h4>
+                        <h3>Arduino Source Code</h3>
                         <p>arduinoCode.ino · C++ / Arduino</p>
                     </div>
-                    
-                    <div class="card-actions">
-                        <button id="copy-code" class="register-button" disabled>
-                            <span class="material-symbols-outlined">
-                                content_copy
-                            </span>
-                            <span>Copy Code</span>
+
+                    <div class="header-actions">
+                        <button id="download-code" class="btn btn-ghost" type="button" disabled>
+                            <span class="material-symbols-outlined" aria-hidden="true">download</span>
+                            <span>Unduh .ino</span>
+                        </button>
+                        <button id="copy-code" class="btn btn-primary" type="button" disabled>
+                            <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
+                            <span class="btn-label">Copy Code</span>
                         </button>
                     </div>
                 </div>
-                
+
                 <div class="code-container">
                     <pre><code id="code-preview" class="language-cpp">Memuat source code...</code></pre>
                 </div>
-                
-                <div class="card-footer">
-                    <span id="code-status">Menghubungkan ke GitHub...</span>
+
+                <div class="card-footer footer-split">
+                    <span id="code-status" aria-live="polite">Menghubungkan ke GitHub...</span>
+                    <span id="code-meta" class="muted-mono"></span>
                 </div>
             </div>
         </section>
-        
-        <section class="content">
+
+        <!-- Perkembangan -->
+        <section class="content" id="perkembangan" aria-labelledby="perkembangan-title">
             <div class="section-header">
-                <h3>Perkembangan Proyek</h3>
-                <p>Visualisasi informasi dan perkembangan pengerjaan proyek.</p>
+                <h2 id="perkembangan-title">Perkembangan Proyek</h2>
+                <p>Sebaran anggota pada setiap tugas, dihitung dari data pendaftaran.</p>
             </div>
 
-            <div class="chart-placeholder">
-                <span class="material-symbols-outlined">
-                    monitoring
-                </span>
-
-                <p>Grafik perkembangan proyek akan ditampilkan di sini.</p>
+            <div class="card chart-card">
+                <div id="task-chart" class="task-chart" aria-live="polite">
+                    <p class="chart-empty">Memuat data tugas...</p>
+                </div>
             </div>
         </section>
 
+        <footer class="site-footer">
+            <span>Proyek Tempat Sampah Otomatis</span>
+            <span>Data anggota dari Google Sheets · Berkas dari GitHub</span>
+            <span>•Made by Gemilang Dwi Putra•</span>
+        </footer>
+
     </main>
 
-    <script type="module" src="js/index.js"></script>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/components/prism-core.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script type="module" src="js/index.js"></script>
 </body>
 
 </html>
